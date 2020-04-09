@@ -1,0 +1,20 @@
+if [ $# -eq 0 ]
+then
+echo "
+usage $0 [1/2/3]
+			1、./vecadd-1-TestbyLPF
+"
+exit
+fi
+if [ $# -gt 1 ]
+then
+echo "
+usage $0 [1/2/3]
+			1、./vecadd-1-TestbyLPF
+"
+exit
+fi
+if [ "$1" = "1" ]
+then
+LD_PRELOAD=./dead_store_check.so ./vecadd-1-TestbyLPF
+fi
